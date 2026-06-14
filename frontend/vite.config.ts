@@ -52,6 +52,16 @@ export default defineConfig({
       includeAssets: ["**/*", "sw.js", "!splash-screens/**/*"],
     }),
   ],
+  server: {
+    proxy: {
+      "/api": {
+        target: "http://localhost:4000",
+        changeOrigin: true,
+        secure: false,
+        rewrite: (path) => path.replace(/^\/api/, "/api"),
+      },
+    },
+  },
   resolve: {
     extensions: [".tsx", ".ts", ".jsx", ".js", ".json", ".mjs", ".mts"],
     dedupe: ["react", "react-dom", "@emotion/react"],

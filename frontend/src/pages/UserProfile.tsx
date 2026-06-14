@@ -265,7 +265,7 @@ const UserProfile = () => {
               Profile picture might be broken. You can try removing it.
             </BrokenPfpAlert>
           )}
-        <UserName translate={name ? "no" : "yes"}>{name || "User"}</UserName>
+        <UserName translate={name ? "no" : "yes"}>{name || ""}</UserName>
         <Tooltip
           title={new Intl.DateTimeFormat(navigator.language, {
             dateStyle: "full",
