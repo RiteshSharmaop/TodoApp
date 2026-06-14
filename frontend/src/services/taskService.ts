@@ -5,7 +5,7 @@ interface TasksResponse {
   tasks: Task[];
 }
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:4000/api";
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "/api";
 
 export const fetchTasks = async (): Promise<Task[]> => {
   const response = await fetch(`${API_BASE_URL}/tasks`, {

@@ -14,6 +14,8 @@ import { ColorPalette } from "../theme/themeConfig";
 import InputThemeProvider from "../contexts/InputThemeProvider";
 import { CategorySelect } from "../components/CategorySelect";
 import { useToasterStore } from "react-hot-toast";
+import { getAuthToken } from "../services/apiClient";
+import { saveTasks } from "../services/taskService";
 
 const AddTask = () => {
   const { user, setUser } = useContext(UserContext);
@@ -85,7 +87,7 @@ const AddTask = () => {
     setDeadline(event.target.value);
   };
 
-  const handleAddTask = () => {
+  const handleAddTask = async () => {
     if (name === "") {
       showToast("Task name is required.", {
         type: "error",
@@ -113,10 +115,20 @@ const AddTask = () => {
       category: selectedCategories ? selectedCategories : [],
     };
 
+    const updatedTasks = [...user.tasks, newTask];
     setUser((prevUser) => ({
       ...prevUser,
-      tasks: [...prevUser.tasks, newTask],
+      tasks: updatedTasks,
     }));
+
+    const token = getAuthToken();
+    if (token) {
+      try {
+        await saveTasks(updatedTasks);
+      } catch (error) {
+        console.warn("Failed to save new task to backend", error);
+      }
+    }
 
     n("/");
 

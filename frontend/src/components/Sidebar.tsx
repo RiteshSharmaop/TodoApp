@@ -198,7 +198,7 @@ export const ProfileSidebar = () => {
 
   return (
     <Container>
-      <Tooltip title={<div translate={name ? "no" : "yes"}>{name || "User"}</div>}>
+      <Tooltip title={name || "Profile"}>
         <IconButton
           aria-label="Sidebar"
           aria-controls={open ? "basic-menu" : undefined}
@@ -209,7 +209,7 @@ export const ProfileSidebar = () => {
         >
           <UserAvatar
             src={avatarSrc || undefined}
-            alt={name || "User"}
+            alt={name || "Profile"}
             hasimage={profilePicture !== null}
             pulse={
               user.name === defaultUser.name &&
@@ -346,7 +346,7 @@ export const ProfileSidebar = () => {
           </StyledMenuItem>
         </MenuLink>
 
-        <MenuLink to="https://www.buymeacoffee.com/maciekt07">
+        <MenuLink to="https://www.buymeacoffee.com/riteshlnct3">
           <StyledMenuItem className="bmcMenu">
             <BmcIcon className="bmc-icon" src={theme.darkmode ? bmcLogoLight : bmcLogo} /> &nbsp;
             Buy me a coffee{" "}
@@ -434,7 +434,7 @@ export const ProfileSidebar = () => {
               >
                 {name ? name[0].toUpperCase() : undefined}
               </UserAvatar>
-              <h4 style={{ margin: 0, fontWeight: 600 }}> {name || "User"}</h4>{" "}
+              <h4 style={{ margin: 0, fontWeight: 600 }}>{name || ""}</h4>
               {(name === null || name === "") && profilePicture === null && <PulseMenuLabel />}
             </ProfileMenuItem>
           </MenuLink>

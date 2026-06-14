@@ -1,12 +1,13 @@
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:4000/api";
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "/api";
 
-interface RequestOptions extends RequestInit {
+type RequestOptions = Omit<RequestInit, "body"> & {
   body?: Record<string, unknown> | null;
-}
+};
 
 const request = async <T>(path: string, options: RequestOptions = {}): Promise<T> => {
   const headers: HeadersInit = {
     "Content-Type": "application/json",
+    ...authHeaders(),
     ...options.headers,
   };
 

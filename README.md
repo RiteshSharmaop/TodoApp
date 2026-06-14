@@ -1,10 +1,8 @@
-<!-- <p align="center">
-<img src="https://raw.githubusercontent.com/maciekt07/TodoApp/main/public/logo192.png" width="128px" />
-</p> -->
+
 
 # 📝React.js Todo App
 
-<p align="center"><i>A fast and modern Todo app built with React, featuring task sharing via link, P2P Task Sync with WebRTC, theme customization, offline usage as a PWA, and caching for smooth performance.</i></p>
+<p align="center"><i>A fast and modern Todo app built with MERN, featuring task sharing via link, P2P Task Sync with WebRTC, theme customization, offline usage as a PWA, and caching for smooth performance.</i></p>
 
 <img src="https://raw.githubusercontent.com/maciekt07/TodoApp/main/screenshots/baner.png" />
 
@@ -24,6 +22,15 @@
 <ul style="display: flex; flex-direction: column; gap:10px;">
   <li style="vertical-align: middle;">
     <img src="https://go-skill-icons.vercel.app/api/icons?i=react" alt="react" width="24" style="vertical-align: middle; margin-right: 4px;" /> React
+  </li>
+  <li style="vertical-align: middle;">
+    <img src="https://go-skill-icons.vercel.app/api/icons?i=nodejs" alt="node" width="24" style="vertical-align: middle; margin-right: 4px;" /> Node
+  </li>
+  <li style="vertical-align: middle;">
+    <img src="https://go-skill-icons.vercel.app/api/icons?i=express" alt="express" width="24" style="vertical-align: middle; margin-right: 4px;" /> Express
+  </li>
+  <li style="vertical-align: middle;">
+    <img src="https://go-skill-icons.vercel.app/api/icons?i=redis" alt="react" width="24" style="vertical-align: middle; margin-right: 4px;" /> Redis
   </li>
     <li style="vertical-align: middle;">
     <img src="https://go-skill-icons.vercel.app/api/icons?i=typescript" alt="typescript" width="20" style="vertical-align: middle;margin-right: 4px;" /> Typescript
@@ -120,7 +127,7 @@ To install and run the project locally, follow these steps:
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/maciekt07/TodoApp.git
+git clone https://github.com/RiteshSharmaop/TodoApp.git
 ```
 
 2. Navigate to the project directory:
@@ -167,4 +174,4 @@ The app will now be running at [http://localhost:5173/](http://localhost:5173/).
 
 ## Credits
 
-Made with ❤️ by [maciekt07](https://github.com/maciekt07), licensed under [MIT](https://github.com/maciekt07/TodoApp/blob/main/LICENSE).
+Made with ❤️ by [Ritesh](https://github.com/RiteshSharmaop), licensed under [MIT](https://github.com/RiteshSharmaop/TodoApp/blob/main/LICENSE).

@@ -72,7 +72,7 @@ export const TaskItem = memo(
       disabled: !moveMode,
     });
 
-    const itemRef = useRef<HTMLDivElement>(null);
+    const itemRef = useRef<HTMLDivElement | null>(null);
 
     const {
       enableLinks = true,
